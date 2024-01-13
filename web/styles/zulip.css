@@ -756,6 +756,21 @@ strong {
     position: relative;
 }
 
+/* .dropdown-menu from v2.3.2
+   + https://github.com/zulip/zulip/commit/7a3a3be7e547d3e8f0ed00820835104867f2433d
+   basic idea of this fix is to remove decorations from :hover and apply them only
+   on :focus. */
+.typeahead-menu {
+    li {
+        a {
+            i.zulip-icon-bot {
+                font-size: 13px;
+                align-self: center;
+            }
+        }
+    }
+}
+
 .new_messages {
     background-color: hsl(194deg 53% 79%);
 }
@@ -1093,6 +1108,14 @@ div.focused-message-list {
     border-radius: 6px;
     padding: 0;
     font-size: 0;
+}
+
+.typeahead.dropdown-menu {
+    .active {
+        & a i {
+            color: hsl(0deg 0% 100%);
+        }
+    }
 }
 
 nav {
@@ -2092,4 +2115,8 @@ body:not(.hide-left-sidebar) {
         background-color: var(--color-background-image-loader);
         border: 1px solid var(--color-border-personal-menu-avatar);
     }
+}
+
+.typeahead.dropdown-menu .active a .zulip-icon-bot {
+    color: var(--color-icon-bot);
 }
