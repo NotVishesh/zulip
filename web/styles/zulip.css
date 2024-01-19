@@ -833,6 +833,21 @@ strong {
     }
 }
 
+.message_header_private_message {
+    .message_label_clickable {
+        .private_message_header_name {
+            display: flex;
+            align-items: center;
+            gap: var(--margin-lefthand-bot-icon-offset);
+
+            i.zulip-icon-bot {
+                font-size: 16px;
+                margin-left : 3px;
+            }
+        }
+    }
+}
+
 .selected_message {
     .messagebox-content {
         /* We add an outline and shift it inside the message so that without
