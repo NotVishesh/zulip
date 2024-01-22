@@ -53,12 +53,21 @@ const polonius = {
     full_name: "Polonius",
     is_guest: true,
 };
+
+const zulip_default_bot = {
+    email: "default-bot@zulip.com",
+    user_id: 16,
+    full_name: "Zulip Default Bot",
+    is_bot: true,
+};
+
 const inaccessible_user_id = 33;
 const inaccessible_user = people.add_inaccessible_user(inaccessible_user_id);
 people.init();
 people.add_active_user(iago);
 people.add_active_user(cordelia);
 people.add_active_user(polonius);
+people.add_active_user(zulip_default_bot);
 people.initialize_current_user(iago.user_id);
 
 const group_me = {
